@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="checkNumber">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.32/angular.js"></script>
+    <script src="controller.js"></script>
+  </head>
+  <body ng-controller="userInfoCtrl">
+    <div id="form">
+    	Number: <input type="text" name="number" ng-model="infoForm.number" ng-change="isNumber(infoForm.number)" ng-model-options="{debounce: 750}">
+    	<br>
+    	<span style="color: red" ng-if="numberStatus=='invalid'">Number is invalid </span>
+    </div>
+  </body>
+</html>
